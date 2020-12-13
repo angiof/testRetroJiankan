@@ -19,10 +19,11 @@
         app:layout_constraintVertical_bias="0.073"
         tools:listitem="@layout/recy_news_items_list" />
 
-    <Button
-        android:id="@+id/button"
+    <TextView
+        android:id="@+id/testo_frag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

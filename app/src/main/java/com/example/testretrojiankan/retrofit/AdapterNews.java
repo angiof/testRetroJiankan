@@ -14,21 +14,21 @@ import com.bumptech.glide.request.RequestOptions;
 import com.example.testretrojiankan.databinding.RecyNewsItemsListBinding;
 import com.example.testretrojiankan.retrofit.retrofit.Top_;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class AdapterNews extends RecyclerView.Adapter<AdapterNews.CLassHolder> {
-    private List<Top_> top_list;
+    private List<Top_> top_list = new ArrayList();
     Context context;
 
 
-
-    public void setTop_list(List<Top_> top_list ) {
+    public void setTop_list(List<Top_> top_list) {
         this.top_list = top_list;
     }
 
     @Override
-    public AdapterNews.CLassHolder onCreateViewHolder( ViewGroup parent, int viewType) {
+    public AdapterNews.CLassHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return new CLassHolder(RecyNewsItemsListBinding.inflate(LayoutInflater.from(parent.getContext()),
                 parent, false));
 
