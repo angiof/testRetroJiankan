@@ -7,34 +7,34 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class WebServices {
 
-    private static final  String BASE_URL="https://api.jikan.moe/v3/";
+    private static final String BASE_URL = "https://api.jikan.moe/v3/";
     private static WebServices instance;
     private Retrofit retrofit;
-    private HttpLoggingInterceptor looggingInterceptor;
-    private OkHttpClient.Builder httPclientBuilder;
+    private final HttpLoggingInterceptor looggingInterceptor;
+    private final OkHttpClient.Builder httPclientBuilder;
 
 
-    public WebServices(){
-        looggingInterceptor= new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY);
-        httPclientBuilder=new OkHttpClient.Builder().addInterceptor(looggingInterceptor);
+    public WebServices() {
+        looggingInterceptor = new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY);
+        httPclientBuilder = new OkHttpClient.Builder().addInterceptor(looggingInterceptor);
         retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .client(httPclientBuilder.build())
                 .addConverterFactory(GsonConverterFactory.create())
-             //   .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                //   .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
     }
 
-    public static synchronized WebServices getInstance(){
-        if (instance==null){
-            instance= new WebServices();
+    public static synchronized WebServices getInstance() {
+        if (instance == null) {
+            instance = new WebServices();
         }
 
         return instance;
     }
 
 
-    public WebApis createService(){
+    public WebApis createService() {
         return retrofit.create(WebApis.class);
     }
 

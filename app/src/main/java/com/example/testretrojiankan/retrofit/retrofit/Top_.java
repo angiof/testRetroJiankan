@@ -1,10 +1,10 @@
+package com.example.testretrojiankan.retrofit.retrofit;
 
-package com.example.testretrojiankan.retrofit.retrofit; ;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Top_   {
+public class Top_ {
 
     @SerializedName("mal_id")
     @Expose
@@ -127,6 +127,5 @@ public class Top_   {
     public void setScore(Integer score) {
         this.score = score;
     }
-
 
 }

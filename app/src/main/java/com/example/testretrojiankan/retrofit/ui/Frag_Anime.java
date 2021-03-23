@@ -1,12 +1,11 @@
 package com.example.testretrojiankan.retrofit.ui;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
 
 import com.example.testretrojiankan.databinding.AnimeFragLayoutBinding;
 
@@ -14,10 +13,11 @@ import com.example.testretrojiankan.databinding.AnimeFragLayoutBinding;
 public class Frag_Anime extends Fragment {
     AnimeFragLayoutBinding layoutBinding;
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        layoutBinding=AnimeFragLayoutBinding.inflate(getLayoutInflater());
+        layoutBinding = AnimeFragLayoutBinding.inflate(getLayoutInflater());
         // Inflate the layout for this fragment
 
 
@@ -60,6 +60,6 @@ public class Frag_Anime extends Fragment {
     */
 
 
-        return  layoutBinding.getRoot();
+        return layoutBinding.getRoot();
     }
 }
