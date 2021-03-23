@@ -82,7 +82,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView_frag"
+        android:id="@+id/textView_genere"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
@@ -97,7 +97,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="26dp"
         android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/textView_frag"
+        app:layout_constraintBottom_toTopOf="@+id/textView_genere"
         app:layout_constraintEnd_toEndOf="@+id/edit_view"
         app:layout_constraintStart_toStartOf="@+id/edit_view" />
 
@@ -105,9 +105,9 @@
         android:id="@+id/text_sipnasis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="2dp"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/textView_frag"
-        app:layout_constraintTop_toBottomOf="@+id/textView_frag" />
+        app:layout_constraintEnd_toEndOf="@+id/textView_genere"
+        app:layout_constraintTop_toBottomOf="@+id/textView_genere" />
 </androidx.constraintlayout.widget.ConstraintLayout>

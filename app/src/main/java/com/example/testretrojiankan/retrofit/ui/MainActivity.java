@@ -1,6 +1,7 @@
 package com.example.testretrojiankan.retrofit.ui;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     static ActivityMainBinding binding;
     static String ricerca;
 
+
     public static void retrofitAnimeFinderDisara() {
         ricerca = binding.editView.getText().toString();
 
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
                 binding.textViewTitle.setText(response.body().getResults().get(0).getTitle());
                 binding.textSipnasis.setText(response.body().getResults().get(0).getSynopsis());
+                binding.textViewGenere.setText(response.body().getResults().get(0).getType());
                 Picasso.get().load(response.body().getResults().get(0).getImageUrl()).into(binding.imageViewFrag);
             }
 
@@ -49,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         binding.button.setOnClickListener(x -> {
+            Toast.makeText(this, "trovato", Toast.LENGTH_SHORT).show();
 
             retrofitAnimeFinderDisara();
         });
