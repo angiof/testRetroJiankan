@@ -19,7 +19,25 @@ public class MainActivity extends AppCompatActivity {
     static String ricerca;
 
 
-    public static void retrofitAnimeFinderDisara() {
+   
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+
+        setContentView(binding.getRoot());
+
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        binding.button.setOnClickListener(x -> {
+            Toast.makeText(this, "trovato", Toast.LENGTH_SHORT).show();
+
+            retrofitAnimeFinderDisara();
+        });
+
+
+    }
+     public static void retrofitAnimeFinderDisara() {
         ricerca = binding.editView.getText().toString();
 
         if (ricerca.isEmpty()) ricerca = "naruto";
@@ -42,23 +60,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-
-        setContentView(binding.getRoot());
-
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-
-        binding.button.setOnClickListener(x -> {
-            Toast.makeText(this, "trovato", Toast.LENGTH_SHORT).show();
-
-            retrofitAnimeFinderDisara();
-        });
-
-
-    }
 
 
 }
