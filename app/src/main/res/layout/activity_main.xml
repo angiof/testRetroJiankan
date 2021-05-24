@@ -39,6 +39,8 @@
         app:layout_constraintGuide_begin="35dp" />
 
     <ImageView
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="H,4:3"
         android:id="@+id/imageView_frag"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -96,7 +98,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="26dp"
-        android:text="Button"
+        android:text="cerca"
         app:layout_constraintBottom_toTopOf="@+id/textView_genere"
         app:layout_constraintEnd_toEndOf="@+id/edit_view"
         app:layout_constraintStart_toStartOf="@+id/edit_view" />
@@ -105,9 +107,9 @@
         android:id="@+id/text_sipnasis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="2dp"
+        android:layout_marginTop="8dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="@+id/textView_genere"
+        app:layout_constraintStart_toStartOf="@+id/textView_genere"
         app:layout_constraintTop_toBottomOf="@+id/textView_genere" />
 </androidx.constraintlayout.widget.ConstraintLayout>
